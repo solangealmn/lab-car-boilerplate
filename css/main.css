@@ -1,1 +1,105 @@
-/* Los estilos de tu proyecto */
+/* Los estilos de tu proyecto
+480px assume o formato mobile*/
+.background-header{
+  background: url(../assets/images/taxi.jpg) no-repeat top 92% center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+.dropdown-item:hover{
+  background-color:#2B2B2B;
+  color: #F7B617;
+  text-decoration: none;
+}
+.p-right{
+  padding-right: 0;
+}
+.bg-yellow-labcar{
+  background-color: #F7B617;
+}
+.jumbotron-yellow{
+  margin-top: 35%;
+  margin-bottom: 35%;
+  padding: 30px;
+}
+.p-bottom{
+  padding-bottom: 4px;
+}
+.bien{
+  z-index: 100;
+  position: relative;
+  bottom: 30px;
+  left: 40%;
+}
+.app-service{
+
+}
+.img-app-labcar{
+  width: 100%;
+}
+.background-driver{
+  background: url(../assets/images/conduce.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+}
+.bg-transparent{
+  background: transparent;
+}
+.bg-fade{
+  background: rgba(0,0,0,0.5);  /* 50% transparent */
+  height: 600px;
+}
+.form-control-lab-car {
+    color: #fff;
+    background-color: #F7B617;
+    border: 1px solid #fff;
+}
+.form-control-lab-car::-webkit-input-placeholder {
+   color: #fff;
+}
+
+.form-control-lab-car:-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+
+.form-control-lab-car::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;
+}
+
+.form-control-lab-car:-ms-input-placeholder {
+   color: #fff;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 350px;
+  width: 100%;
+ }
+ footer{
+   background-color: #2B2B2B;
+   color:#fff;
+ }
+ footer ul{
+  list-style: none;
+ }
+ footer a{
+  color: #fff;
+  text-decoration: none;
+ }
+ footer a:hover{
+  color: #F7B617;
+  text-decoration: none;
+ }
+ .footer-logo{
+   width: 100px;
+ }
+ footer img{
+   width: 100%;
+ }
+ @media only screen and (max-width: 480px) {
+
+ }
