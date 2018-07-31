@@ -25,19 +25,57 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto w-100 justify-content-end">
             <li class="nav-item active">
-              <a class="dropdown-item" href="#">Viaja<span class="sr-only"></span></a>
+              <a class="dropdown-item btn btn-light" href="#">Viaja<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
-              <a class="dropdown-item" href="#">Conduce</a>
+              <a class="dropdown-item btn btn-light" href="#">Conduce</a>
             </li>
             <li class="nav-item">
-              <a class="dropdown-item" href="#">Inicia sesión</a>
+              <!-- link trigger modal -->
+              <a href="#" class="dropdown-item btn btn-light btn-rounded mb-4" data-toggle="modal" data-target="#modalLoginForm">Inicia sesión</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  <!-- Modal -->
+  <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold"><i class="fas fa-user-circle"></i></h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Username</label>
+            <div class="input-group mb-1">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-envelope prefix grey-text"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            </div>
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="inlineFormInputGroup">Password</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-lock prefix grey-text"></i></div>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Password">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer d-flex flex-column justify-content-center">
+          <button class="btn btn-default">Loging</button>
+          <p class="text-secondary mt-2">Forgot password? <a class="text-danger" href="#">Click here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
   <section class="background-header">
     <div class="container-fluid">
       <div class="row">
@@ -47,7 +85,7 @@
               <div class="col-12">
                 <h1 class="display-5 text-white">Disfruta del viaje<br>Eres dueño de tu tiempo</h1>
                 <p class="lead text-white d-sm-block">Viaja com <img class="p-bottom" src="assets/images/logoBlanco.png" height="20" alt=""></p>
-                <a class="btn btn-light btn-lg text-uppercase mt-3 mb-3" href="#" role="button">Regístrate</a>
+                <a class="btn btn-light btn-lg text-uppercase mt-3 mb-3" href="#" role="button" data-toggle="modal" data-target="#modalSignUpUser">Regístrate</a>
                 <p>
                   <hr class="mt-2 bg-light">
                   <span class="bien bg-yellow-labcar pt-2 pb-2 pl-4 pr-4 text-white">O bien</span>
@@ -71,6 +109,130 @@
     </div>
   </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="modalSignUpUser" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-labcar-modal">
+      <div class="modal-header text-center border-0 pb-1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pt-0 text-center">
+        <a class="btn btn-dark btn-info my-4 btn-block mt-0 mb-2" href="#" role="button">Ya tienes una cuenta?</a>
+        <p class="w-100 font-weight-bold text-uppercase">
+          <a class="text-dark" href="#">O crea una cuenta nueva</a>
+        </p>
+        <form class="text-center p-2">
+          <div class="form-row mb-2">
+            <div class="col">
+              <!-- First name -->
+              <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col">
+              <!-- Last name -->
+              <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Apellido">
+            </div>
+          </div>
+          <!-- Phone number -->
+          <input type="text" id="defaultRegisterPhonePassword" class="form-control mb-2" placeholder="Teléfono" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+          <!-- E-mail -->
+          <input type="email" id="defaultRegisterFormEmail" class="form-control mb-2" placeholder="Correo Electronico: ejemplo@correo.mx">
+          <!-- Password -->
+          <input type="password" id="defaultRegisterFormPassword" class="form-control mb-2" placeholder="Contraseña" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+          <!--City-->
+          <input type="text" id="defaultRegisterFormCity" class="form-control mb-2" placeholder="Ciudad" aria-describedby="defaultRegisterFormCiudadHelpBlock">
+          <!--Code-->
+          <input type="text" id="defaultRegisterFormCode" class="form-control mb-2" placeholder="(Opcional) Código de Invitacíon" aria-describedby="defaultRegisterFormCodeHelpBlock">
+          <!-- Dropdown button -->
+          <div class="dropdown">
+            <button class="btn btn-light btn-block dropdown-toggle" type="button" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Como te enteraste de nosotros? <i class="fas fa-angle-down"></i>
+            </button>
+            <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuUser">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+          <!-- Send button -->
+          <button class="btn btn-info my-2 btn-block text-uppercase" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalSignUpDriver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-labcar-modal">
+      <div class="modal-header text-center border-0 pb-1">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pt-0 text-center">
+      <form class="text-left p-2">
+        <label for="InputQuestion1">¿Tienes vehículo de 4 puertas?</label>
+        <!-- Dropdown button -->
+        <div class="dropdown mb-4">
+          <button class="btn btn-light btn-block text-right dropdown-toggle" type="button" id="dropdownAsk1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div class="dropdown-menu w-100" aria-labelledby="dropdownAsk1">
+            <a class="dropdown-item active" href="#">Sí</a>
+            <a class="dropdown-item" href="#">No</a>
+          </div>
+        </div>
+        <label for="InputQuestion1">Marca</label>
+        <!-- Dropdown button -->
+        <div class="dropdown">
+          <button class="btn btn-light btn-block text-right dropdown-toggle" type="button" id="dropdownAsk1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div class="dropdown-menu w-100" aria-labelledby="dropdownAsk1">
+            <a class="dropdown-item" href="#">Fiat</a>
+            <a class="dropdown-item" href="#">Honda</a>
+            <a class="dropdown-item" href="#">Nissan</a>
+            <a class="dropdown-item" href="#">Peugeot</a>
+          </div>
+        </div>
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          ¿No ves tu vehículo en la Ista? Envía un COMO eledrónico <a href="maito:sodoendviluber.con">sodoendviluber.con</a>
+        </small>
+        <label for="InputQuestion1">Modelo</label>
+        <!-- Dropdown button -->
+        <div class="dropdown mb-4">
+          <button class="btn btn-light btn-block text-right dropdown-toggle" type="button" id="dropdownAsk1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div class="dropdown-menu w-100" aria-labelledby="dropdownAsk1">
+            <a class="dropdown-item" href="#">HB20</a>
+            <a class="dropdown-item" href="#">Gol</a>
+            <a class="dropdown-item" href="#">Golf</a>
+            <a class="dropdown-item" href="#">Fit</a>
+          </div>
+        </div>
+        <label for="InputQuestion1">Ano</label>
+        <!-- Dropdown button -->
+        <div class="dropdown mb-4">
+          <button class="btn btn-light btn-block text-right dropdown-toggle" type="button" id="dropdownAsk1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+          <div class="dropdown-menu w-100" aria-labelledby="dropdownAsk1">
+            <a class="dropdown-item" href="#">2017</a>
+            <a class="dropdown-item" href="#">2016</a>
+            <a class="dropdown-item" href="#">2015</a>
+            <a class="dropdown-item" href="#">2014</a>
+          </div>
+        </div>
+        <!-- Enrollment Number -->
+        <label for="InputMatricula">Número de la matrícula</label>
+        <input type="email" id="defaultRegisterFormEmail" class="form-control" placeholder="Número de la matrícula">
+        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          La información de la matrícula ayuda a los clientes a identificar tu vehículo.
+        </small>
+        <!-- Send button -->
+        <button class="btn btn-info my-2 btn-block text-uppercase" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
 <section class="app-service bg-yellow-labcar">
   <div class="container-fluid pt-2 pb-2 d-block d-sm-none d-md-none">
     <div class="row no-gutters mt-3 mb-3 border border-white">
@@ -116,7 +278,7 @@
             <div class="col-12 col-sm-12">
               <h2 class="display-5 text-white">Conduce quando quieras</h2>
               <p class="lead text-white">Lab Car és una opción flexible para alcanzar tus metas financieras.</p>
-              <a class="btn btn-warning btn-lg text-white btn-block mt-3 mb-3" href="#" role="button">Conviértete en un condutor</a>
+              <a class="btn btn-warning btn-lg text-white btn-block mt-3 mb-3" href="#" role="button"  data-toggle="modal" data-target="#modalSignUpDriver">Conviértete en un condutor</a>
             </div>
           </div>
         </div>

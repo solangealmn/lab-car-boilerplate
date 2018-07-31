@@ -33,8 +33,9 @@
   bottom: 30px;
   left: 40%;
 }
-.app-service{
-
+i.fa-user-circle{
+  font-size: 8rem;
+  color:#495057;
 }
 .img-app-labcar{
   width: 100%;
@@ -50,6 +51,12 @@
 }
 .bg-transparent{
   background: transparent;
+}
+.bg-labcar-modal{
+  background: #A9A9A9;
+}
+#dropdownMenuUser::after{
+  display: none;
 }
 .bg-fade{
   background: rgba(0,0,0,0.5);  /* 50% transparent */
