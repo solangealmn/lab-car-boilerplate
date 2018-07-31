@@ -38,6 +38,7 @@
 }
 .img-app-labcar{
   width: 100%;
+  max-width: 300px;
 }
 .background-driver{
   background: url(../assets/images/conduce.jpg) no-repeat top center fixed;
